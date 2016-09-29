@@ -5,6 +5,10 @@ import matplotlib.pyplot as plt
 
 data_file = "arabian_sea200602.pix"
 
+
+rowValue = input("Enter the row value")
+
+
 result = {}
 
 with open(data_file,'r') as f:
@@ -12,10 +16,10 @@ with open(data_file,'r') as f:
 
 	for row in reader:
 		if row[0] in result:
-			temp = float(row[4])
+			temp = float(row[rowValue])
 			result[row[0]].append(temp)
 		else:
-			result[row[0]] = [row[4]]
+			result[row[0]] = [row[rowValue]]
 
 
 #Get all the keys of the list and store it in a tuple
