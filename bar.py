@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 data_file = "arabian_sea200602.pix"
 
 
-rowValue = input("Enter the row value")
-
+# rowValue = input("Enter the row value")
+rowValue=4
 
 result = {}
 
@@ -44,9 +44,20 @@ N = len(resultMean)
 x = range(1,N+1)
 width = 1/1.5
 
+plt.figure(1)
 plt.title('Bar Graph')
 plt.ylabel('total_AOD fine Mean', fontsize=12)
 plt.xlabel('Date', fontsize=12)
 plt.bar(x, resultMean, width, color="blue")
 plt.xticks(x,size="small")
+# plt.show()
+
+
+
+
+
+#draw histogram
+plt.figure(2)
+plt.hist(resultMean, bins=N)
 plt.show()
+
