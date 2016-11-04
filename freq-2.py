@@ -9,7 +9,7 @@ def writeToFile(row6,row7,row8):
     thefile = open('data.txt', 'w')
 
     for i in range(0,len(row6)):
-        thefile.write("%s %s %s" % (row6[i],row7[i],row8[i]))
+        thefile.write("%s %s %s\n" % (row6[i],row7[i],row8[i]))
     #print (item6,item7,item8
 
 
