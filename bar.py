@@ -32,6 +32,10 @@ resultStd = []
 
 for value in keys:
     temp = np.array(result[value], dtype="float")
+    a = np.mean(temp) #mean for date
+    b = np.std(temp) #std for date
+    #value contains the date
+    #use this 3 varaible to write to file
     resultMean.append(np.mean(temp))
     resultStd.append(np.std(temp))
 #########
